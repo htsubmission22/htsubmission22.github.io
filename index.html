@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Analysing COVID-19 Pandemic: Twitter Dataset Case Study</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style>
+/* Bootstrap overrides */
+body {
+  /*min-height: 1000px;*/
+  padding-top: 70px;
+}
+
+.navbar-default {
+  height: 65px;
+}
+
+.navbar-default
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 18pt;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 16pt;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script src="https://www.highcharts.com/media/com_demo/js/highslide-full.min.js"></script>
+<script src="https://www.highcharts.com/media/com_demo/js/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
+
+
+<script>
+	// Get the CSV and create the chart
+	//$.getJSON('based.json', function (chart) {
+	//	Highcharts.chart('plot', chart);
+	//});
+  $.getJSON('corr.json', function (chart) {
+		Highcharts.chart('plotcorr', chart);
+	});
+  $.getJSON('daytoday.json', function (chart) {
+    Highcharts.chart('plotdaytoday', chart);
+	});
+
+</script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <a href="index.html" class="navbar-brand">Analysing COVID-19 Pandemic: Twitter Dataset Case Study</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ">
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#download">Downloads</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#rpartners">Research Partners</a></li>
+              </ul>
+              <a href="https://github.com/htsubmission22/htsubmission22.github.io"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me (if you wish) on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png""></a>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <div class="page-header">
+
+<h2 id="about">About this Study</h2>
+<p style="font-size: 16px">
+  <br>
+
+The COVID-19 pandemic era will be remembered as a uniquely disruptive period that altered the lives of billions of citizens globally, resulting in new-normal for the way people live and work. With the coronavirus pandemic, businesses, governments, and educational institutes adapted to the ``work or study from home'' operating model that has not only transformed our online lives but has also exponentially increased the use of cyberspace. Concurrently, there has been a huge spike in the usage of social media platforms such as Facebook and Twitter during the COVID-19 lockdown periods. These lockdown periods have resulted in a set of new cybercrimes, thereby allowing attackers to victimise users of social media platforms in times of fear, uncertainty, and doubt. The threats range from running phishing campaigns and malicious domains to extracting private information about victims for malicious purposes. To this end, it is vital to analyse the impact of drastic transformations that were taken during lockdown periods on the security and privacy of users. 
+
+<br>
+
+<br>
+This research paper performs a large-scale study to investigate the impact of lockdown periods during COVID-19 pandemic on the security and privacy of social media users. We analyse 10.6 Million COVID-related tweets from 533 days of data crawling and investigate users' security and privacy behaviour in three different periods (i.e., before, during, and after lockdown). Our study shows that users unintentionally share more personal identifiable information when writing about the pandemic situation (e.g., sharing building name, nearby coronavirus testing location) in their tweets. The privacy risk reaches to 100% if a user posts three or more sensitive tweets about the pandemic. 
+We investigate the number of suspicious domains shared in social media during different phases of the pandemic. Our analysis reveals an increase in the number of suspicious domains during the lockdown compared to other lockdown phases. We observe that IT, Search Engines, and Businesses are the top three categories that contain suspicious domains. Our analysis reveals that adversaries' strategies to instigate malicious activities change with the country's pandemic situation.
+
+<br>
+</p>
+<br>
+<h2 id="download">Paper and Dataset Download Policy</h2>
+<p style="font-size: 16px">
+Our paper is under submission. <br>
+
+Our <a href='https://github.com/htsubmission22/mal-activity-reporting'> scripts</a> used for the publication can be found in our <a href='https://github.com/htsubmission22/mal-activity-reporting'>Github repo</a>.
+</p>
+
+
+
+<br /><br>
+</p>
+
+<h2 id="contact">Contact</h2>
+<p style="font-size: 16px">
+  <ul>		      
+  <li><b> TBD </b> htsubmission22@gmail.com
+  		      
+		      </ul>
+</p>
+<br>
+<h2 id="rpartner">Research Partners</h2>
+<p style="font-size: 16px">
+We make our dataset available for future research.  </a> project.
+
+    </div>  <!-- col -->
+  </div>  <!-- row -->
+
+    </div> <!-- /container -->
+
+</body>
+</html>
